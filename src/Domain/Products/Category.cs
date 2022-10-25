@@ -16,7 +16,6 @@ public class Category : Entity
         EditedOn = DateTime.Now;
 
         Validate();
-
     }
 
     private void Validate()
@@ -29,10 +28,12 @@ public class Category : Entity
         AddNotifications(contract);
     }
 
-    public void EditInfo(string name, bool active)
+    public void EditInfo(string name, bool active, string editedBy)
     {
         Active = active;
         Name = name;
+        EditedBy = editedBy;
+        EditedOn= DateTime.Now;
 
         Validate();
     }
